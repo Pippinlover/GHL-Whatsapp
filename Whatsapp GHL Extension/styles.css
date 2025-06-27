@@ -1,0 +1,98 @@
+/* GHL Contact Overlay Styles */
+.ghl-contact-overlay {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    max-width: 200px;
+    pointer-events: none;
+}
+
+.ghl-contact-info {
+    text-align: right;
+}
+
+.ghl-contact-name {
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+
+.ghl-contact-email {
+    opacity: 0.9;
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+
+.ghl-contact-tags {
+    opacity: 0.8;
+    font-size: 9px;
+    font-style: italic;
+}
+
+/* Header overlay for active chat */
+.ghl-header-overlay {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: rgba(37, 211, 102, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    max-width: 250px;
+}
+
+.ghl-header-info {
+    text-align: right;
+}
+
+.ghl-header-name {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.ghl-header-email {
+    opacity: 0.9;
+    font-size: 11px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ghl-contact-overlay {
+        font-size: 10px;
+        padding: 4px 8px;
+        max-width: 150px;
+    }
+    
+    .ghl-header-overlay {
+        font-size: 11px;
+        padding: 6px 10px;
+        max-width: 200px;
+    }
+}
+
+/* Animation for when overlay appears */
+.ghl-contact-overlay,
+.ghl-header-overlay {
+    animation: ghlFadeIn 0.3s ease-out;
+}
+
+@keyframes ghlFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
